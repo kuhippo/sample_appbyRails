@@ -1,9 +1,5 @@
 source 'https://rubygems.org'
 
-git_source(:github) do |repo_name|
-  repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
-  "https://github.com/#{repo_name}.git"
-end
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
@@ -54,13 +50,13 @@ group :production do
   gem 'pg', '0.18.4'
 end
 
-
 group :test do
   gem 'rails-controller-testing', '0.1.1'
-  gem 'minitest-reporters',
-  gem 'guard',
-  gem 'guard-minitest',
+  gem 'minitest-reporters',   '1.1.9'
+  gem 'guard',                '2.13.0'
+  gem 'guard-minitest',       '2.4.4'
 end
+
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
