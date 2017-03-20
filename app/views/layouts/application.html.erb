@@ -7,8 +7,10 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= render 'layouts/shim' %>
   </head>
   <body>
+    <%= render 'layouts/header' %>
     <%= yield %>
     <header class="navbar navbar-fixed-top navbar-inverse">
      <div class="container">
@@ -22,6 +24,6 @@
        </nav>
       </div>
     </header>
-  <div class="container">
+    <%= render 'layouts/footer'%>
   </body>
 </html>
